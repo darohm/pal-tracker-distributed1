@@ -44,6 +44,13 @@ public class StoryDataGateway {
         );
     }
 
+//    TODO: Need to make this return x recent entries by projectId
+//     public List<StoryRecord> findXRecentEntriesByProjectId(Long projectId, int x) {
+//        return jdbcTemplate.query(
+//                "select id, project_id, name from stories where project_id = ?",
+//                rowMapper, projectId
+//        );
+//    }
 
     private StoryRecord find(long id) {
         return jdbcTemplate.queryForObject(

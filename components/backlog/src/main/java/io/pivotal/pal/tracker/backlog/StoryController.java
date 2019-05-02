@@ -42,6 +42,13 @@ public class StoryController {
             .collect(toList());
     }
 
+//    TODO: Need to finish making this work with listing x number of stories you want ot return
+//    @GetMapping
+//    public List<StoryInfo> list(@RequestParam long projectId, @RequestParam int x) {
+//        return gateway.findXRecentEntriesByProjectId(projectId).stream()
+//                .map(this::present)
+//                .collect(toList());
+//    }
 
     private boolean projectIsActive(long projectId) {
         ProjectInfo project = client.getProject(projectId);
